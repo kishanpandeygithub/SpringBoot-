@@ -10,12 +10,12 @@ import org.springframework.stereotype.Component;
 //@Component
 public class OrderService {
    // Field injection means that the instancde variabe is already injected
-//    @Autowired
+    @Autowired
     private  PaymentService paymentService ;
 
 
     //most recomendaded
-//    /dependency injection throught  the constructuo
+//    /dependency injection throught  the constructor
     @Autowired //: it say the paymentservice dependency of the orderservice is injected through the constructor
     public  OrderService(@Qualifier("up") PaymentService paymentService){
         this.paymentService = paymentService;

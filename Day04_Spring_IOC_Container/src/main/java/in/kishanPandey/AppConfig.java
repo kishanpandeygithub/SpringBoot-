@@ -17,7 +17,7 @@ public class AppConfig {
     //empty
     @Bean
     public User createUser(){
-        return new User("Kishan", 23);
+        return new User("Kishan", 21);
     }
 
     @Bean
@@ -36,8 +36,9 @@ public class AppConfig {
     public PaymentService CreateOrderService (){
         return new UpiPayment();
     }
+
     @Bean
-    public OrderService createOrderService(@Qualifier("cp") PaymentService paymentService){
+    public OrderService createOrderService( PaymentService paymentService){
         return new OrderService(paymentService);
     }
 }

@@ -9,11 +9,12 @@ import java.util.EmptyStackException;
 public class Main {
 
     public static void main(String[] args) {
-        NotificationService notification = new emailService();
+        NotificationService notification = new PopUpService();
 //        OrderService order =new OrderService(notification);
 //        order.placeOrder();
         OrderService order  = new OrderService();
         order.setNotification(notification);
+        order.placeOrder();
         System.out.println("Hello World");
     }
 }

@@ -7,9 +7,9 @@ import in.kishanPandey.Notification.emailService;
 
 public class OrderService {
     NotificationService notification ;
-    public OrderService(NotificationService notification){
-        this.notification = notification;
-    }
+//    public OrderService(NotificationService notification){
+//        this.notification = notification;
+//    }
     public OrderService(){
 
     }
