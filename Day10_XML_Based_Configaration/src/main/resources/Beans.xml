@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- bean definitions here -->
+
+    <!--    <bean id="orderService" class="in.kishanPandey.OrderService">-->
+    <!--        <constructor-arg ref="paymentService"></constructor-arg>-->
+    <!--    </bean>-->
+
+    <!--    <bean id="orderService" class="in.kishanPandey.OrderService">-->
+    <!--        <property name="PaymentService" ref="paymentService" />-->
+    <!--    </bean>-->
+
+    <!--    <bean id="paymentService" class="in.kishanPandey.Payment.PaymentService">-->
+    <!--        <constructor-arg name="retryCount" index="1" value="3"></constructor-arg>-->
+    <!--        <constructor-arg name="type" index="0" value="UPI"></constructor-arg>-->
+    <!--    </bean>-->
+    <!--    <bean id="orderService2" class="in.kishanPandey.OrderService"/>-->
+
+<!--    <bean id="upiPaymentService" class="in.kishanPandey.Payment.UPIPaymentService"/>-->
+<!--    <bean id="cardPaymentService" class="in.kishanPandey.Payment.CardPaymentService"/>-->
+<!--    <bean id="orderService" class="in.kishanPandey.OrderService">-->
+<!--        <constructor-arg ref="cardPaymentService"/>-->
+<!--    </bean>-->
+<!--    <bean id="userService" class="in.kishanPandey.UserService">-->
+<!--        <constructor-arg name="userName">-->
+<!--            <map>-->
+<!--                <entry key="1" value=""></entry>-->
+<!--                <entry key="1" value=""></entry>-->
+<!--                <entry key="1" value=""></entry>-->
+<!--            </map>-->
+<!--        </constructor-arg>-->
+<!--    </bean>-->
+    <!--    <bean id="userService" class="in.kishanPandey.UserService"-->
+    <!--    scope="prototype"/>-->
+
+    <bean id="userServise" class="in.kishanPandey.UserService" init-method="init" destroy-method="cleanUp">
+
+    </bean>
+</beans>
