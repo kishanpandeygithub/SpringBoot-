@@ -5,9 +5,12 @@ import org.springframework.stereotype.Component;
 
 @Component
 @Scope("singleton")
-//@Scope("singleton")
+//@Scope("prototype")
 public class OrderService {
-    public OrderService() {
+    private Payment payment;
+
+    public OrderService(Payment payment) {
+        this.payment =payment;
         System.out.println("Order Services Created");
     }
 
