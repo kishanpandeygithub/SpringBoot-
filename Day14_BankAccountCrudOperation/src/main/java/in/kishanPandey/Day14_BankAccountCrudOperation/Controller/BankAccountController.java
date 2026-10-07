@@ -114,4 +114,14 @@ public class BankAccountController {
         }
         return ResponseEntity.status(HttpStatus.OK).body("Account DeActivated");
     }
+
+    //PATCH / '/api/accounts/from/{id}/to/{id}.
+    @PatchMapping("/from/{id1}/to/{id2}/{amount}")
+    public ResponseEntity<String> transferMoney(@PathVariable Long id1 , @PathVariable Long id2 ,@PathVariable Integer amount){
+        Boolean isSuccessfull = bankAccountService.transferMoneyFromAccount(id1 ,id2 , amount);
+        if(isSuccessfull){
+            return ResponseEntity.status(200).body("Successfull Transfer amount");
+        }
+        return ResponseEntity.status(400).build();
+    }
 }
