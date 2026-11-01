@@ -128,7 +128,7 @@ public class SecurityConfig {
     @Bean
     public JwtDecoder jwtDecoder(
             SecretKey secretKey,
-            @Value("") String issuer
+            @Value("${jwt.issuer}") String issuer
     ) {
         NimbusJwtDecoder decoder =
                 NimbusJwtDecoder
@@ -140,6 +140,7 @@ public class SecurityConfig {
                         issuer
                 )
         );
+        System.out.println("Expected issuer: [" + issuer + "]");
         return decoder;
     }
 

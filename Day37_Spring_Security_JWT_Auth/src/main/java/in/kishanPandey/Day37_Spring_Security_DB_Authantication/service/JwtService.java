@@ -30,7 +30,7 @@ public class JwtService {
 
     public String generateToken(Authentication authentication) {
         Instant now = Instant.now();
-
+        System.out.println("Token issuer: [" + issuer + "]");
         List<String> authorities =
                 authentication.getAuthorities()
                         .stream()
